@@ -1,0 +1,18 @@
+.fridge{
+    padding: 5px;
+    border: 2px solid black;
+    width: 200px;
+}
+
+.on{
+    background-color: green;
+}
+.off{
+    background-color: red;
+}
+.tempPlus{
+    background-color: darkorange;
+}
+.tempMin{
+    background-color: blueviolet;
+}

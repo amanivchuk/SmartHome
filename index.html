@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart home</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+    <input type = 'text' id = 'new_Name' value="Enter device">
+    <select id = 'new_Type'>
+        <option>Lamp</option>
+        <option>Heater</option>
+        <option>Калорифер</option>
+    </select>
+    <input type = 'submit' onclick = "add()" value = "Add device"/><p></p>
+
+    <div id="root"></div>
+    <div id="root2"></div>
+
+    <script src="Switch.js"></script>
+    <script src="./Fridge.js"></script>
+    <script src="ViewFridge.js"></script>
+    <script src="Lighting.js"></script>
+    <script src="ViewLighting.js"></script>
+    <script src="ViewAll.js"></script>
+    <script src="script.js"></script>
+    <script src="Heater.js"></script>
+    <script src="ViewHeater.js"></script>
+
+</body>
+</html>
