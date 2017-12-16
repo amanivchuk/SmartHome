@@ -4,31 +4,63 @@ var list = [];
 
 let view = document.getElementById("root");
 
+// list.push(new Fridge("NORD"), view);
+list.push(new Fridge("NORD"));
+list.push(new Lighting("Lamp Hall"));
+
+/*
 list.push(new ViewFridge(new Fridge("NORD"), view));
 list.push(new ViewLighting(new Lighting("Lamp Hall"), view));
+* */
 
 
 function show(){
-    for(var i = 0; i < list.length; i++){
-        list[i].render();
+    for(var i = 0; i < list.length; i++) {
+        if(list[i].constructor.name === "Fridge"){
+            new ViewFridge(list[i], view).render();
+        }
+        if(list[i].constructor.name === "Lighting"){
+            new ViewLighting(list[i], view).render();
+            // console.log(list[i]);
+        }
+        if(list[i].constructor.name === "Heater"){
+            new ViewHeater(list[i], view).render();
+            // console.log(list[i]);
+        }
+        // list[i].render();
+    }
+}
+
+function removeItem(array, item){
+    for(var i in array){
+        if(array[i]==item){
+            array.splice(i,1);
+            break;
+        }
     }
 }
 
 function deleteObject(name, type){
-    console.log("Aaaaaaaaa");
+
     if(type === 'Lamp'){
-        let l = new ViewLighting(new Lighting(name), view);
         for(var i =0; i < list.length; i++){
-            if(list[i] === l){
-                list[i].pop();
+            if(list[i].lightName == name){
+                var index = list.indexOf(list[i]);
+                console.log("--- " + index);
+                list = list.filter(function(item) {
+                    return item !== list[i];
+                });
             }
         }
     }
-    else if(type === 'Heater'){
-        let h = new ViewHeater(new Heater(name), view);
+    else if(type == 'Heater'){
         for(var i =0; i < list.length; i++){
-            if(list[i] === h){
-                list[i].pop();
+            if(list[i].model == name){
+                var index = list.indexOf(list[i]);
+                console.log("--- " + index);
+                list = list.filter(function(item) {
+                    return item !== list[i];
+                });
             }
         }
     }
@@ -38,12 +70,12 @@ function deleteObject(name, type){
 
 function render(name, type){
     if(type === 'Lamp'){
-        let l = new ViewLighting(new Lighting(name), view);
+        let l = new Lighting(name);
         // l.render();
         list.push(l);
     }
     else if(type === 'Heater'){
-        let h = new ViewHeater(new Heater(name), view);
+        let h = new Heater(name);
         // h.render();
         list.push(h);
     }

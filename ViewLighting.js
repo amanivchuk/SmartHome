@@ -49,4 +49,3 @@ class ViewLighting{
         this._rootElement.appendChild(light);
     }
 }
-

@@ -8,4 +8,8 @@ class Lighting extends Switch{
     get name(){
         return this._name;
     }
+    get lightName(){
+        return this._name;
+    }
+
 }
