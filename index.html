@@ -15,6 +15,15 @@
     </select>
     <input type = 'submit' onclick = "add()" value = "Add device"/><p></p>
 
+    <input type = 'text' id = 'name' value="Enter device">
+    <select id = 'type'>
+        <option>Lamp</option>
+        <option>Heater</option>
+        <option>Калорифер</option>
+    </select>
+    <input type = 'submit' onclick = "del()" value = "Delete device"/><p></p>
+
+
     <div id="root"></div>
     <div id="root2"></div>
 
@@ -27,6 +36,7 @@
     <script src="script.js"></script>
     <script src="Heater.js"></script>
     <script src="ViewHeater.js"></script>
+    <script src="scriptDel.js"></script>
 
 </body>
 </html>
