@@ -7,25 +7,47 @@
 </head>
 <body>
 
-    <input type = 'text' id = 'new_Name' value="Enter device">
-    <select id = 'new_Type'>
-        <option>Lamp</option>
-        <option>Heater</option>
-        <option>Calorifier</option>
-    </select>
-    <input type = 'submit' onclick = "add()" value = "Add device"/><p></p>
+    <header>
+        <div class="container">
+            <div class=" clearfix">
+                <img src="logo2.png" class="logo">
+                <div class="title">
+                    Welcome to SmartHome!
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <input type = 'text' id = 'name' value="Enter device">
-    <select id = 'type'>
-        <option>Lamp</option>
-        <option>Heater</option>
-        <option>Calorifier</option>
-    </select>
-    <input type = 'submit' onclick = "del()" value = "Delete device"/><p></p>
+    <section class="container">
+        <div class="test">
+            <input type = 'text' id = 'new_Name' value="Enter device">
+            <select id = 'new_Type'>
+                <option>Lamp</option>
+                <option>Heater</option>
+                <option>Calorifier</option>
+            </select>
+            <input type = 'submit' onclick = "add()" value = "Add device" class="button"/><p></p>
+        </div>
+        <div class="test">
+            <input type = 'text' id = 'name' value="Enter device">
+            <select id = 'type'>
+                <option>Lamp</option>
+                <option>Heater</option>
+                <option>Calorifier</option>
+            </select>
+            <input type = 'submit' onclick = "del()" value = "Delete device" class="button"/><p></p>
+        </div>
+    </section>
 
+    <section class="container">
+            <div id="root"></div>
+    </section>
 
-    <div id="root"></div>
-    <div id="root2"></div>
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
 
     <script src="Switch.js"></script>
     <script src="Device.js"></script>

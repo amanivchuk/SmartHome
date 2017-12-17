@@ -20,7 +20,7 @@ class ViewFridge{
 
         let model = document.createElement("div");
         model.className = "modelId";
-        model.innerText = `Model: ${this._fridge.model}`;
+        model.innerText = `Model: ${this._fridge.model}` ;
 
         /*--------------Temperature --------------------*/
         let tmpBtn = document.createElement("button");

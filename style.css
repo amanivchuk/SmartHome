@@ -1,18 +1,147 @@
+header{
+    background-color: beige;
+    height: 300px;
+}
+.clearfix:after{
+    content: '';
+    display: table;
+    width: 100%;
+    clear: both;
+}
+div{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif, Arial;
+}
+.logo{
+    padding: 0;
+    margin: 0;
+}
+.title{
+    font-size: 50px;
+    color: #96BB32;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: -100px;
+    margin-left: 440px;
+
+}
+.container{
+    width: 1100px;
+    margin: -20px auto;
+    height: 100px;
+
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 3px;
+    background: #FF6F00;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    cursor: pointer;
+
+}
+.button:hover,
+.rerun-button:hover {
+    background: #e66400;
+}
+.button.rerun-button,
+.rerun-button.rerun-button {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    margin-bottom: 50px;
+    box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+
+#id{
+    margin: 330px 0;
+    padding: 3100px 0;
+    text-align: center;
+
+}
+.title h2{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: -30px 0;
+    padding: 60px 0;
+}
+.title p{
+    color: #777777;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.test{
+    width: 250px;
+    height: 100px;
+    float: left;
+    text-align: center;
+    padding: 10px;
+    margin: 100px;
+}
+
 .fridge{
-    padding: 5px;
     border: 2px solid black;
-    width: 200px;
+    width: 330px;
+    height: 150px;
+    float: left;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    background:beige;
+    font-family: "Times New Roman";
+}
+input[type="text"],
+input[type="email"],
+select{
+    padding: 10px 20px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    display: block;
+    width: 300px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    outline: none;
+}
+input[type="text"]:focus,
+input[type="email"]:focus
+select{
+    border-color: #FF6F00;
 }
 
 .on{
     background-color: green;
+    padding: 10px;
+    margin: 5px;
 }
 .off{
     background-color: red;
+    padding: 10px;
+    margin: 5px;
 }
 .tempPlus{
     background-color: darkorange;
+    padding: 10px;
+    margin: 5px;
 }
 .tempMin{
     background-color: blueviolet;
+    padding: 10px;
+    margin: 5px;
+}
+footer{
+    margin: 800px 0 auto;
+    background-color: beige;
+    height: 100px;
 }
