@@ -27,16 +27,10 @@ function show(){
             new ViewHeater(list[i], view).render();
             // console.log(list[i]);
         }
-        // list[i].render();
-    }
-}
-
-function removeItem(array, item){
-    for(var i in array){
-        if(array[i]==item){
-            array.splice(i,1);
-            break;
+        if(list[i].constructor.name === "Calorifier"){
+            new ViewCalorifier(list[i], view).render();
         }
+        // list[i].render();
     }
 }
 
@@ -63,6 +57,16 @@ function deleteObject(name, type){
                 });
             }
         }
+    }else if(type === 'Calorifier'){
+        for(var i =0; i < list.length; i++){
+            if(list[i].model === name){
+                var index = list.indexOf(list[i]);
+                console.log("--- " + index);
+                list = list.filter(function(item) {
+                    return item !== list[i];
+                });
+            }
+        }
     }
     view.innerText="";
     show();
@@ -78,6 +82,9 @@ function render(name, type){
         let h = new Heater(name);
         // h.render();
         list.push(h);
+    } else if(type === 'Calorifier'){
+        let c = new Calorifier(name);
+        list.push(c);
     }
     view.innerText="";
     show();
